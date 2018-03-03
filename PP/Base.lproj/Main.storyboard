@@ -203,11 +203,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-nt-Ou8" customClass="CategoriesScrollView" customModule="PP" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-nt-Ou8" customClass="CategoriesScrollView" customModule="PP" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-pY-wMU">
-                                        <rect key="frame" x="0.0" y="0.0" width="848" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="856" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-BO-Rle">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
@@ -217,49 +217,71 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-Dl-utV">
-                                                <rect key="frame" x="30" y="15" width="107" height="30"/>
+                                                <rect key="frame" x="30" y="15" width="115" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Рекомендации">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="3ND-ag-eFb"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-WG-t4i">
-                                                <rect key="frame" x="167" y="15" width="116" height="30"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-WG-t4i">
+                                                <rect key="frame" x="175" y="15" width="116" height="30"/>
                                                 <state key="normal" title="Вегетарианское">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="2Ks-uG-0uB"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-KF-OEL">
-                                                <rect key="frame" x="313" y="15" width="54" height="30"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-KF-OEL">
+                                                <rect key="frame" x="321" y="15" width="54" height="30"/>
                                                 <state key="normal" title="Фитнес">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="F0p-5f-LkG"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-Xc-c7V">
-                                                <rect key="frame" x="397" y="15" width="64" height="30"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-Xc-c7V">
+                                                <rect key="frame" x="405" y="15" width="64" height="30"/>
                                                 <state key="normal" title="10 минут">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="ofC-RR-KBq"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-UA-BwF">
-                                                <rect key="frame" x="491" y="15" width="102" height="30"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-UA-BwF">
+                                                <rect key="frame" x="499" y="15" width="102" height="30"/>
                                                 <state key="normal" title="Классическое">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="w9h-yZ-rsn"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-sw-chZ">
-                                                <rect key="frame" x="623" y="15" width="68" height="30"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-sw-chZ">
+                                                <rect key="frame" x="631" y="15" width="68" height="30"/>
                                                 <state key="normal" title="Премиум">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="0JQ-35-Y5H"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km4-vJ-c3j">
-                                                <rect key="frame" x="721" y="15" width="97" height="30"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km4-vJ-c3j">
+                                                <rect key="frame" x="729" y="15" width="97" height="30"/>
                                                 <state key="normal" title="Праздничное">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseCategory:" destination="BPy-gy-dPW" eventType="touchUpInside" id="W4j-Ck-vPf"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-iE-lIC">
-                                                <rect key="frame" x="848" y="0.0" width="0.0" height="60"/>
+                                                <rect key="frame" x="856" y="0.0" width="0.0" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="5j2-Rc-xmN"/>
@@ -326,6 +348,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="b1h-3X-FSu" id="qNH-I2-Dd7"/>
+                        <outletCollection property="categoriesButtons" destination="g4g-Dl-utV" collectionClass="NSMutableArray" id="owI-3h-HKX"/>
+                        <outletCollection property="categoriesButtons" destination="OBc-WG-t4i" collectionClass="NSMutableArray" id="Fmn-d9-CMB"/>
+                        <outletCollection property="categoriesButtons" destination="zEO-KF-OEL" collectionClass="NSMutableArray" id="ubV-32-4hp"/>
+                        <outletCollection property="categoriesButtons" destination="6TW-Xc-c7V" collectionClass="NSMutableArray" id="wwy-A9-89E"/>
+                        <outletCollection property="categoriesButtons" destination="oO0-UA-BwF" collectionClass="NSMutableArray" id="lGC-MX-get"/>
+                        <outletCollection property="categoriesButtons" destination="ywQ-sw-chZ" collectionClass="NSMutableArray" id="bpd-r0-uwV"/>
+                        <outletCollection property="categoriesButtons" destination="Km4-vJ-c3j" collectionClass="NSMutableArray" id="YWV-S6-S88"/>
                         <segue destination="RKd-69-EQD" kind="show" identifier="RecipeSegue" id="t0u-R1-Omm"/>
                     </connections>
                 </viewController>

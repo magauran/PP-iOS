@@ -13,6 +13,13 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet var categoriesButtons: [UIButton]!
+    
+    var selectedCategory = 0
+    
+    let defaultFont = UIFont(name: "Helvetica", size: 15)
+    let selectedFont = UIFont(name: "Helvetica Bold", size: 15)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Рецепты"
@@ -39,6 +46,14 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         performSegue(withIdentifier: "RecipeSegue", sender: nil)
     }
 
+    
+    @IBAction func chooseCategory(_ sender: UIButton) {
+        self.categoriesButtons[selectedCategory].titleLabel?.font = self.defaultFont
+        self.categoriesButtons[sender.tag].titleLabel?.font = self.selectedFont
+        self.selectedCategory = sender.tag
+    }
+    
+    
 
     /*
     // MARK: - Navigation
