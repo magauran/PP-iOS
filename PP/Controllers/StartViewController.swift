@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyVK
 
 class StartViewController: UIViewController {
 
@@ -21,12 +22,16 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(nextVC(_:)), name: NSNotification.Name(rawValue: "vkDidAutrorize"), object: nil)
     }
     
     func vkAuth() {
-        performSegue(withIdentifier: "HealthSegue", sender: nil)
+        VK.logIn()
     }
 
+    @objc func nextVC(_ note: Notification) {
+        performSegue(withIdentifier: "HealthSegue", sender: nil)
+    }
     
 }
 

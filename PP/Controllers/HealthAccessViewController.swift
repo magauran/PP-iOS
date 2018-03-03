@@ -114,9 +114,13 @@ class HealthAccessViewController: UIViewController {
                               "isBirthday": self.isBirthday,
                               "isActive": self.isActive,
                               "isSporty": self.isSporty,
-                              "isBirthday": self.isBirthday
+                              "isBirthday": self.isBirthday,
+                              "subscriptions": User.subscriptions,
+                              "relation": User.relation
+                
                               ]
             print(json)
+            
             self.performSegue(withIdentifier: "AllRecipesSegue", sender: nil)
         }
     }
