@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.0)
+  - SwiftyJSON (3.1.4)
+  - SwiftyVK (2.0.8)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftyJSON
+  - SwiftyVK
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyVK: 940bc77f65ad0c5ea2d2d9cb578943f686fd8e63
+
+PODFILE CHECKSUM: 77e1ecc5907904442ab7130fcc6d6896988610cd
+
+COCOAPODS: 1.2.1
