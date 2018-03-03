@@ -20,10 +20,32 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     let defaultFont = UIFont(name: "Helvetica", size: 15)
     let selectedFont = UIFont(name: "Helvetica Bold", size: 15)
     
+    var navigationBarIsHidden = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Рецепты"
         self.collectionView.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "recipeCellId")
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.panGestureRecognizer.velocity(in: self.collectionView).y > 0 {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+                self.view.setNeedsLayout()
+                print("Unhide")
+            })
+        } else {
+            UIView.animate(withDuration: 0.2, animations: {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.view.setNeedsLayout()
+                print("Hide")
+            })
+           
+
+        }
+
+        //self.navigationController?.setNavigationBarHidden(.yscrollView.panGestureRecognizer.velocity(in: self.collectionView).y > 0, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,9 +74,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         self.categoriesButtons[sender.tag].titleLabel?.font = self.selectedFont
         self.selectedCategory = sender.tag
     }
-    
-    
-
+ 
     /*
     // MARK: - Navigation
 

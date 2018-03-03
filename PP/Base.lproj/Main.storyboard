@@ -337,7 +337,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rE1-ba-wq3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Рецепты" id="9xv-az-MpJ">
+                    <navigationItem key="navigationItem" title="Рецепты" largeTitleDisplayMode="always" id="9xv-az-MpJ">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="profileIcon" id="fbX-VL-6tm">
                             <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
