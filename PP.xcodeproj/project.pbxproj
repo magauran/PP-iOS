@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3C14AC504FC2DB1F064BBC1A /* Pods_PP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998A0AC38C4BBE9128CF06CF /* Pods_PP.framework */; };
+		8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */; };
 		8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */; };
-		8A8CA7B7204AD64C009E6C80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* ViewController.swift */; };
+		8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */; };
 		8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B8204AD64C009E6C80 /* Main.storyboard */; };
 		8A8CA7BC204AD64C009E6C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7BB204AD64C009E6C80 /* Assets.xcassets */; };
 		8A8CA7BF204AD64C009E6C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7BD204AD64C009E6C80 /* LaunchScreen.storyboard */; };
@@ -18,9 +19,10 @@
 /* Begin PBXFileReference section */
 		093E673028771611B2FE935C /* Pods-PP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PP.release.xcconfig"; path = "Pods/Target Support Files/Pods-PP/Pods-PP.release.xcconfig"; sourceTree = "<group>"; };
 		24E6DBB5C21233D8BCBAD1F3 /* Pods-PP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PP/Pods-PP.debug.xcconfig"; sourceTree = "<group>"; };
+		8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAccessViewController.swift; sourceTree = "<group>"; };
 		8A8CA7B1204AD64C009E6C80 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A8CA7B6204AD64C009E6C80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8A8CA7B9204AD64C009E6C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8CA7BB204AD64C009E6C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A8CA7BE204AD64C009E6C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */,
-				8A8CA7B6204AD64C009E6C80 /* ViewController.swift */,
+				8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */,
+				8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */,
 				8A8CA7B8204AD64C009E6C80 /* Main.storyboard */,
 				8A8CA7BB204AD64C009E6C80 /* Assets.xcassets */,
 				8A8CA7BD204AD64C009E6C80 /* LaunchScreen.storyboard */,
@@ -211,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A8CA7B7204AD64C009E6C80 /* ViewController.swift in Sources */,
+				8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */,
+				8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */,
 				8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
