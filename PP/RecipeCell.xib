@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCellId" id="cnZ-F8-fUq" customClass="RecipeCollectionViewCell" customModule="PP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="328"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="198" height="328"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon1" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-k4-Ddf">
+                        <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eqJ-k4-Ddf" secondAttribute="height" multiplier="1:1" id="8br-4e-Kgz"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-Hb-9jn">
+                        <rect key="frame" x="0.0" y="198" width="198" height="170.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="i6t-rA-CQx">
+                                <rect key="frame" x="10" y="0.0" width="198" height="170.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название блюда" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-LJ-4YT">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="86.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время приготовления" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXV-wB-QbJ">
+                                        <rect key="frame" x="0.0" y="66" width="198" height="84"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.4980009198" green="0.49806165699999999" blue="0.49797290560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i6t-rA-CQx" firstAttribute="top" secondItem="tZn-Hb-9jn" secondAttribute="top" id="FyA-Ix-0ea"/>
+                            <constraint firstItem="i6t-rA-CQx" firstAttribute="leading" secondItem="tZn-Hb-9jn" secondAttribute="leading" constant="10" id="Hq8-s1-Nib"/>
+                            <constraint firstItem="i6t-rA-CQx" firstAttribute="trailing" secondItem="tZn-Hb-9jn" secondAttribute="trailing" constant="-10" id="ZHc-r5-YAE"/>
+                            <constraint firstAttribute="bottom" secondItem="i6t-rA-CQx" secondAttribute="bottom" id="cQe-pM-Q1o"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eqJ-k4-Ddf" secondAttribute="trailing" id="Eoq-6j-7H7"/>
+                <constraint firstItem="tZn-Hb-9jn" firstAttribute="leading" secondItem="cnZ-F8-fUq" secondAttribute="leading" id="OF9-tU-XrL"/>
+                <constraint firstItem="eqJ-k4-Ddf" firstAttribute="top" secondItem="cnZ-F8-fUq" secondAttribute="top" id="ZdB-6g-7P3"/>
+                <constraint firstAttribute="bottom" secondItem="tZn-Hb-9jn" secondAttribute="bottom" id="bR6-m2-j0m"/>
+                <constraint firstItem="eqJ-k4-Ddf" firstAttribute="leading" secondItem="cnZ-F8-fUq" secondAttribute="leading" id="geq-7l-oVu"/>
+                <constraint firstItem="tZn-Hb-9jn" firstAttribute="top" secondItem="eqJ-k4-Ddf" secondAttribute="bottom" id="hAj-yo-Fc2"/>
+                <constraint firstAttribute="trailing" secondItem="tZn-Hb-9jn" secondAttribute="trailing" id="tUb-62-QK4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="u4h-Gz-rqi"/>
+            <size key="customSize" width="198" height="328"/>
+            <connections>
+                <outlet property="imageView" destination="eqJ-k4-Ddf" id="JYZ-wk-EQ5"/>
+                <outlet property="timeLabel" destination="DXV-wB-QbJ" id="H70-AM-n2H"/>
+                <outlet property="titleLabel" destination="vEt-LJ-4YT" id="roz-Sg-Ux9"/>
+            </connections>
+            <point key="canvasLocation" x="-1042" y="223"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="fon1" width="595" height="794"/>
+    </resources>
+</document>

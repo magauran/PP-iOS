@@ -187,14 +187,202 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UMH-Cx-5uK"/>
                     </view>
+                    <connections>
+                        <segue destination="bBe-aP-iho" kind="show" identifier="AllRecipesSegue" animates="NO" id="WqR-UO-qYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrv-WG-0Hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="34"/>
+            <point key="canvasLocation" x="279" y="34"/>
+        </scene>
+        <!--Рецепты-->
+        <scene sceneID="xFH-LS-liO">
+            <objects>
+                <viewController id="BPy-gy-dPW" customClass="AllRecipesViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2e0-JU-5ye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfR-nt-Ou8" customClass="CategoriesScrollView" customModule="PP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-pY-wMU">
+                                        <rect key="frame" x="0.0" y="0.0" width="848" height="60"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-BO-Rle">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" id="qMA-oW-q2F"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-Dl-utV">
+                                                <rect key="frame" x="30" y="15" width="107" height="30"/>
+                                                <state key="normal" title="Рекомендации">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-WG-t4i">
+                                                <rect key="frame" x="167" y="15" width="116" height="30"/>
+                                                <state key="normal" title="Вегетарианское">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-KF-OEL">
+                                                <rect key="frame" x="313" y="15" width="54" height="30"/>
+                                                <state key="normal" title="Фитнес">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TW-Xc-c7V">
+                                                <rect key="frame" x="397" y="15" width="64" height="30"/>
+                                                <state key="normal" title="10 минут">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-UA-BwF">
+                                                <rect key="frame" x="491" y="15" width="102" height="30"/>
+                                                <state key="normal" title="Классическое">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywQ-sw-chZ">
+                                                <rect key="frame" x="623" y="15" width="68" height="30"/>
+                                                <state key="normal" title="Премиум">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km4-vJ-c3j">
+                                                <rect key="frame" x="721" y="15" width="97" height="30"/>
+                                                <state key="normal" title="Праздничное">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEL-iE-lIC">
+                                                <rect key="frame" x="848" y="0.0" width="0.0" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" id="5j2-Rc-xmN"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="S5r-pY-wMU" firstAttribute="top" secondItem="hfR-nt-Ou8" secondAttribute="top" id="N5p-eL-IFb"/>
+                                    <constraint firstItem="S5r-pY-wMU" firstAttribute="height" secondItem="hfR-nt-Ou8" secondAttribute="height" id="Rjg-Ot-dfr"/>
+                                    <constraint firstItem="S5r-pY-wMU" firstAttribute="leading" secondItem="hfR-nt-Ou8" secondAttribute="leading" id="WGs-4W-eTq"/>
+                                    <constraint firstAttribute="trailing" secondItem="S5r-pY-wMU" secondAttribute="trailing" id="djA-9b-II7"/>
+                                    <constraint firstAttribute="height" constant="60" id="h21-uX-ueM"/>
+                                    <constraint firstAttribute="bottom" secondItem="S5r-pY-wMU" secondAttribute="bottom" id="yuS-ql-yjv"/>
+                                </constraints>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-3X-FSu">
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <color key="backgroundColor" red="0.89078362944162437" green="0.89078362944162437" blue="0.89078362944162437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="myC-Or-vnM">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCellId" id="3qb-y9-T6F" customClass="RecipeCollectionViewCell" customModule="PP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BPy-gy-dPW" id="JWc-ap-oZ2"/>
+                                    <outlet property="delegate" destination="BPy-gy-dPW" id="bf6-pO-cGS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b1h-3X-FSu" firstAttribute="top" secondItem="hfR-nt-Ou8" secondAttribute="bottom" id="7eo-T3-djz"/>
+                            <constraint firstItem="hfR-nt-Ou8" firstAttribute="leading" secondItem="rE1-ba-wq3" secondAttribute="leading" id="Ne7-SX-Dxu"/>
+                            <constraint firstItem="hfR-nt-Ou8" firstAttribute="top" secondItem="rE1-ba-wq3" secondAttribute="top" id="aaL-pZ-RH3"/>
+                            <constraint firstItem="b1h-3X-FSu" firstAttribute="leading" secondItem="rE1-ba-wq3" secondAttribute="leading" id="iho-ul-nPn"/>
+                            <constraint firstItem="hfR-nt-Ou8" firstAttribute="trailing" secondItem="rE1-ba-wq3" secondAttribute="trailing" id="mri-Ja-Ab7"/>
+                            <constraint firstItem="rE1-ba-wq3" firstAttribute="trailing" secondItem="b1h-3X-FSu" secondAttribute="trailing" id="wso-gm-nhQ"/>
+                            <constraint firstItem="rE1-ba-wq3" firstAttribute="bottom" secondItem="b1h-3X-FSu" secondAttribute="bottom" id="yeK-Wm-2dY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rE1-ba-wq3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Рецепты" id="9xv-az-MpJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="profileIcon" id="fbX-VL-6tm">
+                            <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="OvK-jg-ul8" kind="show" id="yIF-Ec-60U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="b1h-3X-FSu" id="qNH-I2-Dd7"/>
+                        <segue destination="RKd-69-EQD" kind="show" identifier="RecipeSegue" id="t0u-R1-Omm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IA1-R3-np7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="391.75412293853077"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1q8-Mv-6Ao">
+            <objects>
+                <navigationController id="bBe-aP-iho" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ji3-Gc-FVS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BPy-gy-dPW" kind="relationship" relationship="rootViewController" id="g2M-8R-CvF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eod-DZ-YxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-627"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="CMq-7l-2qf">
+            <objects>
+                <viewController id="OvK-jg-ul8" customClass="ProfileViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5IQ-ah-ktM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1Gb-9d-5gE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4w-Qq-6fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="705"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="RJM-9K-Eu3">
+            <objects>
+                <viewController id="RKd-69-EQD" customClass="RecipeViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtz-8s-Liw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lSW-8A-znM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8m1-4x-WNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="-141"/>
         </scene>
     </scenes>
     <resources>
         <image name="fon1" width="595" height="794"/>
         <image name="fon3" width="845" height="1094"/>
+        <image name="profileIcon" width="30" height="30"/>
     </resources>
 </document>

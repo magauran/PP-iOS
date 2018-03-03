@@ -1,5 +1,5 @@
 //
-//  HealthAccessViewController.swift
+//  ProfileViewController.swift
 //  PP
 //
 //  Created by Алексей on 03.03.2018.
@@ -8,20 +8,19 @@
 
 import UIKit
 
-class HealthAccessViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
-    @IBAction func yesButton(_ sender: Any) {
-    }
-    
-    @IBAction func noButton(_ sender: Any) {
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 
     /*
     // MARK: - Navigation
