@@ -121,10 +121,12 @@ class HealthAccessViewController: UIViewController {
                               "occupation": User.occupation
                               ]
             print(json)
-            //PPApiWorker.getRecomendedRecipies(body: json)
-            PPApiWorker.getRecipiesByCategory(category: 0) { result in
+            PPApiWorker.getRecomendedRecipes(body: json) { result in
                 self.performSegue(withIdentifier: "AllRecipesSegue", sender: result)
             }
+//            PPApiWorker.getRecipesByCategory(category: 0) { result in
+//
+//            }
             
         }
     }
@@ -141,7 +143,7 @@ class HealthAccessViewController: UIViewController {
         {
             let secondViewController = segue.destination as! UINavigationController
             let targetController = secondViewController.topViewController as! AllRecipesViewController
-            targetController.recipies = sender as! [Recipe]
+            targetController.recipes = sender as! [Recipe]
         }
     
     }

@@ -16,7 +16,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet var categoriesButtons: [UIButton]!
     
     var selectedCategory = 0
-    var recipies = [Recipe]()
+    var recipes = [Recipe]()
     
     var choosenImage = UIImage.init()
     
@@ -27,7 +27,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(recipies)
         self.navigationItem.title = "Рецепты"
         self.collectionView.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "recipeCellId")
     }
@@ -52,7 +51,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return recipies.count
+        return recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,12 +59,12 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         
         var image = UIImage(named: "fon1")!
         
-        let url = URL(string: recipies[indexPath.row].photo)
+        let url = URL(string: recipes[indexPath.row].photo)
         if let data = try? Data(contentsOf: url!) {
             image = UIImage(data : data)!
         }
         
-        cell.displayContent(image: image, title: recipies[indexPath.row].title, time: recipies[indexPath.row].time)
+        cell.displayContent(image: image, title: recipes[indexPath.row].title, time: recipes[indexPath.row].time)
         
         return cell
     }
@@ -78,7 +77,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let cv = collectionView.cellForItem(at: indexPath) as! RecipeCollectionViewCell
         self.choosenImage = cv.imageView.image!
-        performSegue(withIdentifier: "RecipeSegue", sender: recipies[indexPath.row])
+        performSegue(withIdentifier: "RecipeSegue", sender: recipes[indexPath.row])
         
     }
 

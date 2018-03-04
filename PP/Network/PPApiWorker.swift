@@ -15,7 +15,7 @@ class PPApiWorker {
     static let baseUrl = "http://159.65.117.182:9999/"
     
     
-    class func getRecomendedRecipies(body: JSON) {
+    class func getRecomendedRecipes(body: JSON, completion: @escaping ([Recipe]) -> Void) {
       
         let headers = [
             "Content-Type":"application/json",
@@ -26,16 +26,46 @@ class PPApiWorker {
         
         let url = URL.init(string: baseUrl + "recommend")!
         
+        var recipes = [Recipe]()
+        
         // Fetch Request
         Alamofire.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .validate(statusCode: 200..<300)
-            .response { response in
-                print(response)
+            .responseJSON { response in
+                if (response.result.error == nil) {
+                    let jsonData = response.data
+                    let jsonDecoder = JSONDecoder()
+                    
+                    
+                    let json = JSON(jsonData!)
+                    let array = json["result"].arrayValue
+                    for i in array {
+                        var ingred: [Ingredient]!
+                        if let ingr = try? jsonDecoder.decode([Ingredient].self, from: try! i["ingredients"].rawData()) {
+                            ingred = ingr
+                        }
+                        let title = i["title"].stringValue
+                        let category = i["category"].intValue
+                        let time = i["time"].stringValue
+                        let photo = i["photo"].stringValue
+                        let instructions = i["instructions"].arrayObject as! [String]
+                        let r = Recipe.init(ingredients: ingred, photo: photo, title: title, time: time, category: category, instructions: instructions)
+                        recipes.append(r)
+                    }
+                    //print(recipes)
+                    
+                }
+                else {
+                    
+                    debugPrint("HTTP Request failed: \(response.result.error)")
+                }
+                print(recipes)
+                completion(recipes)
         }
+        
     }
     
-    
-    class func getRecipiesByCategory(category: Int, completion: @escaping ([Recipe]) -> Void) {
+    class func getRecipesByCategory(category: Int, completion: @escaping ([Recipe]) -> Void) {
         
         let url = URL.init(string: baseUrl + "page_\(category)")!
         var recipes = [Recipe]()
