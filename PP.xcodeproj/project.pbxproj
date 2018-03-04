@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C14AC504FC2DB1F064BBC1A /* Pods_PP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998A0AC38C4BBE9128CF06CF /* Pods_PP.framework */; };
+		8A123B0F204BF299001E49BF /* UIViewController+NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A123B0E204BF299001E49BF /* UIViewController+NVActivityIndicatorView.swift */; };
 		8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */; };
 		8A6EC4D5204AE986008267C2 /* AllRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D4204AE986008267C2 /* AllRecipesViewController.swift */; };
 		8A6EC4D9204AE9BA008267C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D8204AE9BA008267C2 /* ProfileViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		093E673028771611B2FE935C /* Pods-PP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PP.release.xcconfig"; path = "Pods/Target Support Files/Pods-PP/Pods-PP.release.xcconfig"; sourceTree = "<group>"; };
 		24E6DBB5C21233D8BCBAD1F3 /* Pods-PP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PP/Pods-PP.debug.xcconfig"; sourceTree = "<group>"; };
+		8A123B0E204BF299001E49BF /* UIViewController+NVActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NVActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAccessViewController.swift; sourceTree = "<group>"; };
 		8A6EC4D4204AE986008267C2 /* AllRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesViewController.swift; sourceTree = "<group>"; };
 		8A6EC4D8204AE9BA008267C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				8A6EC4F3204B1E20008267C2 /* Date+Adding.swift */,
 				8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */,
 				8A6EC513204BDD35008267C2 /* UIImage+NSURLConnection.swift */,
+				8A123B0E204BF299001E49BF /* UIViewController+NVActivityIndicatorView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */,
 				8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */,
 				8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */,
+				8A123B0F204BF299001E49BF /* UIViewController+NVActivityIndicatorView.swift in Sources */,
 				8A6EC50A204B9661008267C2 /* PPApiWorker.swift in Sources */,
 				8A6EC50C204BA889008267C2 /* Recipe.swift in Sources */,
 				8A6EC50E204BA917008267C2 /* Ingredient.swift in Sources */,

@@ -22,6 +22,9 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if VK.state == .authorized {
+            self.performSegue(withIdentifier: "HealthSegue", sender: nil)
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(nextVC(_:)), name: NSNotification.Name(rawValue: "vkDidAutrorize"), object: nil)
     }
     

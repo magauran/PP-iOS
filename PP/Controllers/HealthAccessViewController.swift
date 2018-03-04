@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import HealthKit
 
 class HealthAccessViewController: UIViewController {
 
@@ -30,7 +31,10 @@ class HealthAccessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            self.loadHKData()
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -75,8 +79,12 @@ class HealthAccessViewController: UIViewController {
             }
             self.isSporty = Double(numberOfDaysWhenStepsMoreThan8000) / Double(31) > 0.65 ? 1 : 0
             
-            let avgArrayValue = result.map { $0.count }.reduce(0, +) / result.count
-            self.isSporty = self.isActive * (avgArrayValue > 100 ? 1 : 0)
+            if result.count == 0 {
+                self.isSporty = 0
+            } else {
+                let avgArrayValue = result.map { $0.count }.reduce(0, +) / result.count
+                self.isSporty = self.isActive * (avgArrayValue > 100 ? 1 : 0)
+            }
             self.getWeight()
             
         }

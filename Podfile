@@ -9,5 +9,6 @@ target 'PP' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'SwiftyVK'
+  pod 'NVActivityIndicatorView'
 
 end

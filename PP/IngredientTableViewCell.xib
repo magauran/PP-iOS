@@ -36,6 +36,7 @@
                     <constraint firstItem="4gX-po-Pct" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="CyQ-KK-uEs"/>
                     <constraint firstItem="4gX-po-Pct" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UZT-tR-yZO"/>
                     <constraint firstAttribute="trailing" secondItem="np7-bw-jXg" secondAttribute="trailing" constant="20" id="iYX-Kj-Gg5"/>
+                    <constraint firstItem="np7-bw-jXg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4gX-po-Pct" secondAttribute="trailing" constant="20" id="jSo-VS-hca"/>
                     <constraint firstItem="np7-bw-jXg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uS7-Q1-FMq"/>
                 </constraints>
             </tableViewCellContentView>

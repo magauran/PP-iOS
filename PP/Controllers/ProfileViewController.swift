@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyVK
+import HealthKit
 
 class ProfileViewController: UIViewController {
 
@@ -24,6 +26,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func switchVKLogin(_ sender: UIButton) {
+        VK.logOut()
     }
     
     override func viewDidLoad() {

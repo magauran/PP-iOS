@@ -33,13 +33,13 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-Hb-9jn">
-                        <rect key="frame" x="0.0" y="198" width="198" height="130"/>
+                        <rect key="frame" x="0.0" y="198" width="198" height="131"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="i6t-rA-CQx">
-                                <rect key="frame" x="10" y="0.0" width="198" height="130"/>
+                                <rect key="frame" x="10" y="0.0" width="198" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название блюда" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-LJ-4YT">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="81.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="82.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

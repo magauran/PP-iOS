@@ -71,9 +71,18 @@ class PPApiWorker {
     class func getRecipesByCategory(category: Int, completion: @escaping ([Recipe]) -> Void) {
         
         let url = URL.init(string: baseUrl + "page_\(category)")!
+        let headers = [
+            "Content-Type":"application/json",
+            ]
         var recipes = [Recipe]()
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let isBreakfast = (hour > 3 && hour < 13) ? 1 : 0
+        let body = ["isBreakfast" : isBreakfast]
         // Fetch Request
-        Alamofire.request(url)
+        Alamofire.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
+        //Alamofire.request(url)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                                 if (response.result.error == nil) {
@@ -101,7 +110,7 @@ class PPApiWorker {
                                 }
                                 else {
 
-                                    debugPrint("HTTP Request failed: \(response.result.error)")
+                                    debugPrint("HTTP Request failed: \(String(describing: response.result.error))")
                                 }
                 completion(recipes)
         }

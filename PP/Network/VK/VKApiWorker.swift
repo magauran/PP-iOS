@@ -33,7 +33,9 @@ final class VKApiWorker {
             VK.Arg.extended: "1"
             ]).send(onSuccess: { response in
                 User.subscriptions = response["items"].arrayValue.map({$0["name"].stringValue})
-            NotificationCenter.default.post(.init(name: Notification.Name(rawValue: "vkDidAutrorize")))
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(.init(name: Notification.Name(rawValue: "vkDidAutrorize")))
+                }
         }, onError: { error in
             print(error)
         })
