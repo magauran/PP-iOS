@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,28 +28,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="797" height="1172.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon1" translatesAutoresizingMaskIntoConstraints="NO" id="F3R-0L-44q">
-                                <rect key="frame" x="0.0" y="0.0" width="797" height="1072.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="797" height="1052.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зелёный салат с жареными грибами и кедровыми орешками" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1Q-uh-suk">
-                                <rect key="frame" x="0.0" y="1072.5" width="797" height="75"/>
+                                <rect key="frame" x="0.0" y="1052.5" width="797" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="rDz-lj-nZe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 минут" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-5z-Bk2">
-                                <rect key="frame" x="0.0" y="1147.5" width="797" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="LNY-mA-9KL"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="1127.5" width="797" height="45"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.4980009198" green="0.49806165699999999" blue="0.49797290560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="FBB-5z-Bk2" firstAttribute="height" secondItem="U1Q-uh-suk" secondAttribute="height" multiplier="0.6" id="CCZ-ZT-1aC"/>
                             <constraint firstItem="FBB-5z-Bk2" firstAttribute="leading" secondItem="77E-NF-G34" secondAttribute="leading" id="c2u-nQ-Rpi"/>
                         </constraints>
                     </stackView>

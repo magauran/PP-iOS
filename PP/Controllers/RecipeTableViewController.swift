@@ -21,6 +21,7 @@ class RecipeTableViewController: UITableViewController {
         
         self.tableView.register(UINib(nibName: "RecipeHeadTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipeHeadCell")
         self.tableView.register(UINib(nibName: "IngredientTableViewCell", bundle: nil), forCellReuseIdentifier: "IngredientCell")
+        self.tableView.register(UINib(nibName: "InstructionTableViewCell", bundle: nil), forCellReuseIdentifier: "InstructionCell")
         
         
     }
@@ -33,7 +34,7 @@ class RecipeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 + self.ingredients.count
+        return 1 + self.ingredients.count + self.instructions.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,6 +47,11 @@ class RecipeTableViewController: UITableViewController {
         if indexPath.row <= self.ingredients.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientTableViewCell
             cell.displayContent(name: ingredients[indexPath.row - 1].name, count: ingredients[indexPath.row - 1].value)
+            return cell
+        }
+        if indexPath.row <= self.ingredients.count + self.instructions.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionCell", for: indexPath) as! InstructionTableViewCell
+            cell.displayContent(text: instructions[indexPath.row - self.ingredients.count - 1], step: indexPath.row - self.ingredients.count)
             return cell
         }
         
