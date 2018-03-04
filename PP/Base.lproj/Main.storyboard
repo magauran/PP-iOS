@@ -592,6 +592,18 @@
                     <connections>
                         <outlet property="userNameLabel" destination="pQG-jt-na5" id="PHl-8Q-H4a"/>
                         <outlet property="userPhotoImageView" destination="4eG-B8-Sq5" id="5C1-sd-XF8"/>
+                        <outletCollection property="predictionValues" destination="y5C-Im-a2t" collectionClass="NSMutableArray" id="V1L-O7-MXz"/>
+                        <outletCollection property="predictionValues" destination="uYV-OH-Gta" collectionClass="NSMutableArray" id="oKo-WO-GHB"/>
+                        <outletCollection property="predictionValues" destination="YqE-oR-0R4" collectionClass="NSMutableArray" id="r3p-O4-Y28"/>
+                        <outletCollection property="predictionValues" destination="7mT-4c-3Xx" collectionClass="NSMutableArray" id="Lze-45-Pdj"/>
+                        <outletCollection property="predictionValues" destination="3d7-O1-Uif" collectionClass="NSMutableArray" id="IW2-uj-Uyc"/>
+                        <outletCollection property="predictionValues" destination="tik-6O-tzK" collectionClass="NSMutableArray" id="vDT-9z-Wds"/>
+                        <outletCollection property="categoriesLabels" destination="9t8-DV-owT" collectionClass="NSMutableArray" id="hhx-Zt-Cz5"/>
+                        <outletCollection property="categoriesLabels" destination="G0B-kD-bOA" collectionClass="NSMutableArray" id="LPM-k7-das"/>
+                        <outletCollection property="categoriesLabels" destination="16s-3t-da8" collectionClass="NSMutableArray" id="gQr-LJ-8ea"/>
+                        <outletCollection property="categoriesLabels" destination="fUO-Sm-s4N" collectionClass="NSMutableArray" id="35f-YT-O8v"/>
+                        <outletCollection property="categoriesLabels" destination="li9-gR-Ebu" collectionClass="NSMutableArray" id="nrq-0g-gWz"/>
+                        <outletCollection property="categoriesLabels" destination="nw0-Lg-AWt" collectionClass="NSMutableArray" id="xyn-W4-CBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4w-Qq-6fr" userLabel="First Responder" sceneMemberID="firstResponder"/>

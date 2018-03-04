@@ -40,26 +40,29 @@ class PPApiWorker {
                     let json = JSON(jsonData!)
                     let array = json["result"].arrayValue
                     for i in array {
-                        var ingred: [Ingredient]!
+                        var ingredients: [Ingredient]!
                         if let ingr = try? jsonDecoder.decode([Ingredient].self, from: try! i["ingredients"].rawData()) {
-                            ingred = ingr
+                            ingredients = ingr
                         }
+                        
                         let title = i["title"].stringValue
                         let category = i["category"].intValue
                         let time = i["time"].stringValue
                         let photo = i["photo"].stringValue
                         let instructions = i["instructions"].arrayObject as! [String]
-                        let r = Recipe.init(ingredients: ingred, photo: photo, title: title, time: time, category: category, instructions: instructions)
+                        let r = Recipe.init(ingredients: ingredients, photo: photo, title: title, time: time, category: category, instructions: instructions)
                         recipes.append(r)
                     }
-                    //print(recipes)
+                    
+                    if let predictions = try? jsonDecoder.decode([Double].self, from: try! json["predictions"].rawData()) {
+                        User.predictions = predictions
+                    }
                     
                 }
                 else {
                     
-                    debugPrint("HTTP Request failed: \(response.result.error)")
+                    debugPrint("HTTP Request failed: \(String(describing: response.result.error))")
                 }
-                print(recipes)
                 completion(recipes)
         }
         

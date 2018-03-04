@@ -13,6 +13,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userPhotoImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     
+    @IBOutlet var predictionValues: [UILabel]!
+    
+    @IBOutlet var categoriesLabels: [UILabel]!
+    
+    let categories = ["Вегетерианское", "Фитнес", "10 минут", "Классическое", "Премиум", "Праздничное"]
+    
+    
     @IBAction func switchHealthKitAccess(_ sender: UISwitch) {
     }
     
@@ -22,7 +29,15 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Профиль"
+        
+        for i in 0..<categories.count {
+            self.predictionValues[i].text = "\(String(format: "%.2f%%",(User.predictions[i] * 100)))"
+            self.categoriesLabels[i].text = categories[i]
+            
+        }
+        
         self.fillVKData()
+        
     }
 
     func fillVKData() {

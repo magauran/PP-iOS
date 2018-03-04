@@ -16,4 +16,6 @@ class User {
     static var occupation = 0
     static var subscriptions: [String]!
     static var linkProfileImage = ""
+    static var predictions: [Double]!
+    
 }
