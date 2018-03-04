@@ -10,26 +10,29 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var userPhotoImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    @IBAction func switchHealthKitAccess(_ sender: UISwitch) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func switchVKLogin(_ sender: UIButton) {
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "Профиль"
+        self.fillVKData()
+    }
 
+    func fillVKData() {
+        let url = URL(string: User.linkProfileImage)
+        if let data = try? Data(contentsOf: url!) {
+            let image = UIImage(data : data)
+            self.userPhotoImageView.image = image?.circle
+        } else {
+            self.userPhotoImageView.isHidden = true
+        }
+        self.userNameLabel.text = "\(User.firstName) \(User.lastName)"
+    }
 }

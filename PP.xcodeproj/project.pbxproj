@@ -15,6 +15,16 @@
 		8A6EC4DB204AEE4D008267C2 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */; };
 		8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */; };
 		8A6EC4E0204B0956008267C2 /* CategoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4DF204B0956008267C2 /* CategoriesScrollView.swift */; };
+		8A6EC4E3204B1025008267C2 /* HKSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4E2204B1025008267C2 /* HKSetupAssistant.swift */; };
+		8A6EC4E5204B1131008267C2 /* HKDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4E4204B1131008267C2 /* HKDataStore.swift */; };
+		8A6EC4EA204B118F008267C2 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4E9204B118F008267C2 /* Steps.swift */; };
+		8A6EC4EE204B11CD008267C2 /* HKBiologicalSex+IntRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4EC204B11CC008267C2 /* HKBiologicalSex+IntRepresentation.swift */; };
+		8A6EC4F1204B12B3008267C2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6EC4F0204B12B3008267C2 /* HealthKit.framework */; };
+		8A6EC4F4204B1E20008267C2 /* Date+Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F3204B1E20008267C2 /* Date+Adding.swift */; };
+		8A6EC4F6204B3724008267C2 /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F5204B3724008267C2 /* VKDelegate.swift */; };
+		8A6EC4F8204B3827008267C2 /* VKApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */; };
+		8A6EC4FA204B4B9D008267C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F9204B4B9D008267C2 /* User.swift */; };
+		8A6EC4FC204B717E008267C2 /* UIImage+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */; };
 		8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */; };
 		8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */; };
 		8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B8204AD64C009E6C80 /* Main.storyboard */; };
@@ -32,6 +42,17 @@
 		8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8A6EC4DF204B0956008267C2 /* CategoriesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScrollView.swift; sourceTree = "<group>"; };
+		8A6EC4E2204B1025008267C2 /* HKSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSetupAssistant.swift; sourceTree = "<group>"; };
+		8A6EC4E4204B1131008267C2 /* HKDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataStore.swift; sourceTree = "<group>"; };
+		8A6EC4E9204B118F008267C2 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		8A6EC4EC204B11CC008267C2 /* HKBiologicalSex+IntRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBiologicalSex+IntRepresentation.swift"; sourceTree = "<group>"; };
+		8A6EC4F0204B12B3008267C2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		8A6EC4F2204B12B3008267C2 /* PP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PP.entitlements; sourceTree = "<group>"; };
+		8A6EC4F3204B1E20008267C2 /* Date+Adding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Adding.swift"; sourceTree = "<group>"; };
+		8A6EC4F5204B3724008267C2 /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
+		8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApiWorker.swift; sourceTree = "<group>"; };
+		8A6EC4F9204B4B9D008267C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Circle.swift"; sourceTree = "<group>"; };
 		8A8CA7B1204AD64C009E6C80 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C14AC504FC2DB1F064BBC1A /* Pods_PP.framework in Frameworks */,
+				8A6EC4F1204B12B3008267C2 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +79,7 @@
 		6CA74C0D3FA704E6130EF1C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A6EC4F0204B12B3008267C2 /* HealthKit.framework */,
 				998A0AC38C4BBE9128CF06CF /* Pods_PP.framework */,
 			);
 			name = Frameworks;
@@ -83,6 +106,34 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8A6EC4E1204B1006008267C2 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC4E2204B1025008267C2 /* HKSetupAssistant.swift */,
+				8A6EC4E4204B1131008267C2 /* HKDataStore.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		8A6EC4E8204B1180008267C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC4E9204B118F008267C2 /* Steps.swift */,
+				8A6EC4F9204B4B9D008267C2 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A6EC4EB204B11A9008267C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC4EC204B11CC008267C2 /* HKBiologicalSex+IntRepresentation.swift */,
+				8A6EC4F3204B1E20008267C2 /* Date+Adding.swift */,
+				8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8A8CA7A8204AD64C009E6C80 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +155,14 @@
 		8A8CA7B3204AD64C009E6C80 /* PP */ = {
 			isa = PBXGroup;
 			children = (
+				8A6EC4F2204B12B3008267C2 /* PP.entitlements */,
 				8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */,
+				8A6EC4F5204B3724008267C2 /* VKDelegate.swift */,
+				8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */,
 				8A6EC4DC204AF298008267C2 /* Views */,
+				8A6EC4E8204B1180008267C2 /* Models */,
+				8A6EC4E1204B1006008267C2 /* HealthKit */,
+				8A6EC4EB204B11A9008267C2 /* Extensions */,
 				8A6EC4D3204AE958008267C2 /* Controllers */,
 				8A8CA7B8204AD64C009E6C80 /* Main.storyboard */,
 				8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */,
@@ -161,6 +218,11 @@
 					8A8CA7B0204AD64C009E6C80 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -250,13 +312,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A6EC4D9204AE9BA008267C2 /* ProfileViewController.swift in Sources */,
+				8A6EC4F4204B1E20008267C2 /* Date+Adding.swift in Sources */,
 				8A6EC4D5204AE986008267C2 /* AllRecipesViewController.swift in Sources */,
+				8A6EC4E5204B1131008267C2 /* HKDataStore.swift in Sources */,
+				8A6EC4FA204B4B9D008267C2 /* User.swift in Sources */,
 				8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */,
 				8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */,
 				8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */,
+				8A6EC4EA204B118F008267C2 /* Steps.swift in Sources */,
+				8A6EC4E3204B1025008267C2 /* HKSetupAssistant.swift in Sources */,
 				8A6EC4E0204B0956008267C2 /* CategoriesScrollView.swift in Sources */,
 				8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */,
+				8A6EC4EE204B11CD008267C2 /* HKBiologicalSex+IntRepresentation.swift in Sources */,
+				8A6EC4F8204B3827008267C2 /* VKApiWorker.swift in Sources */,
+				8A6EC4FC204B717E008267C2 /* UIImage+Circle.swift in Sources */,
 				8A6EC4D7204AE9A5008267C2 /* RecipeViewController.swift in Sources */,
+				8A6EC4F6204B3724008267C2 /* VKDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +465,7 @@
 			baseConfigurationReference = 24E6DBB5C21233D8BCBAD1F3 /* Pods-PP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PP/PP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLQY2SH5YN;
 				INFOPLIST_FILE = PP/Info.plist;
@@ -410,6 +482,7 @@
 			baseConfigurationReference = 093E673028771611B2FE935C /* Pods-PP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PP/PP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLQY2SH5YN;
 				INFOPLIST_FILE = PP/Info.plist;
