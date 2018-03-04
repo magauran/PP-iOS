@@ -28,35 +28,51 @@ class PPApiWorker {
         
         // Fetch Request
         Alamofire.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
-            //.validate(statusCode: 200..<300)
+            .validate(statusCode: 200..<300)
             .response { response in
                 print(response)
-//                if (response.result.error == nil) {
-//                    debugPrint("HTTP Response Body: \(response.data)")
-//                }
-//                else {
-//                    debugPrint("HTTP Request failed: \(response.result.error)")
-//                }
         }
     }
     
     
-    class func getRecipiesByCategory(category: Int) {
+    class func getRecipiesByCategory(category: Int, completion: @escaping ([Recipe]) -> Void) {
         
         let url = URL.init(string: baseUrl + "page_\(category)")!
-        
+        var recipes = [Recipe]()
         // Fetch Request
         Alamofire.request(url)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                                 if (response.result.error == nil) {
-                                    debugPrint("HTTP Response Body: \(response.data)")
+                                    let jsonData = response.data
+                                    let jsonDecoder = JSONDecoder()
+                                    
+                                    
+                                    let json = JSON(jsonData!)
+                                    let array = json["result"].arrayValue
+                                    for i in array {
+                                        var ingred: [Ingredient]!
+                                        if let ingr = try? jsonDecoder.decode([Ingredient].self, from: try! i["ingredients"].rawData()) {
+                                            ingred = ingr
+                                        }
+                                        let title = i["title"].stringValue
+                                        let category = i["category"].intValue
+                                        let time = i["time"].stringValue
+                                        let photo = i["photo"].stringValue
+                                        let instructions = i["instructions"].arrayObject as! [String]
+                                        let r = Recipe.init(ingredients: ingred, photo: photo, title: title, time: time, category: category, instructions: instructions)
+                                        recipes.append(r)
+                                    }
+                                    //print(recipes)
+
                                 }
                                 else {
 
                                     debugPrint("HTTP Request failed: \(response.result.error)")
                                 }
+                completion(recipes)
         }
+        
     }
     
     

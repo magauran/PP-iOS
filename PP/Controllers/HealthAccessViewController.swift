@@ -122,7 +122,9 @@ class HealthAccessViewController: UIViewController {
                               ]
             print(json)
             //PPApiWorker.getRecomendedRecipies(body: json)
-            PPApiWorker.getRecipiesByCategory(category: 0)
+            PPApiWorker.getRecipiesByCategory(category: 0) { result in
+                print(result)
+            }
             self.performSegue(withIdentifier: "AllRecipesSegue", sender: nil)
         }
     }
