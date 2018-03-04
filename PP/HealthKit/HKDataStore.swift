@@ -11,18 +11,18 @@ import HealthKit
 
 class HKDataStore {
     
-    class func getBirthday(completion: @escaping (Bool) -> Void) {
+    class func getBirthday(completion: @escaping (Int) -> Void) {
         let healthKitStore = HKHealthStore()
         
         if let birthdayComponents = try? healthKitStore.dateOfBirthComponents() {
             
             let calendar = Calendar.current
-            let isBirthday = calendar.isDateInWeekend(birthdayComponents.date!)
+            let isBirthday = calendar.isDateInWeekend(birthdayComponents.date!) ? 1 : 0
             
             completion(isBirthday)
             return
         }
-        completion(false)
+        completion(0)
     }
     
     class func getAge(completion: @escaping (Int) -> Void) {

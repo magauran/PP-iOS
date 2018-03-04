@@ -37,7 +37,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>vkauthorize</string>
-		<string>vk6394857$</string>
+		<string>vk6394857</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

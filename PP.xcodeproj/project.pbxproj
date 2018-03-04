@@ -29,6 +29,7 @@
 		8A6EC504204B8832008267C2 /* RecipeHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */; };
 		8A6EC507204B8E6A008267C2 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */; };
 		8A6EC508204B8E6A008267C2 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */; };
+		8A6EC50A204B9661008267C2 /* PPApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC509204B9661008267C2 /* PPApiWorker.swift */; };
 		8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */; };
 		8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */; };
 		8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B8204AD64C009E6C80 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeadTableViewCell.swift; sourceTree = "<group>"; };
 		8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		8A6EC509204B9661008267C2 /* PPApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPApiWorker.swift; sourceTree = "<group>"; };
 		8A8CA7B1204AD64C009E6C80 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6EC4FE204B7FA6008267C2 /* VK */,
+				8A6EC509204B9661008267C2 /* PPApiWorker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */,
 				8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */,
 				8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */,
+				8A6EC50A204B9661008267C2 /* PPApiWorker.swift in Sources */,
 				8A6EC4EA204B118F008267C2 /* Steps.swift in Sources */,
 				8A6EC500204B856D008267C2 /* RecipeTableViewController.swift in Sources */,
 				8A6EC4E3204B1025008267C2 /* HKSetupAssistant.swift in Sources */,

@@ -13,9 +13,9 @@ class HealthAccessViewController: UIViewController {
 
     var weight = Double()
     var sex = Int()
-    var isBirthday = Bool()
-    var isActive = Bool()
-    var isSporty = Bool()
+    var isBirthday = Int()
+    var isActive = Int()
+    var isSporty = Int()
     var age = Int()
     
     
@@ -73,10 +73,10 @@ class HealthAccessViewController: UIViewController {
                     numberOfDaysWhenStepsMoreThan8000 += 1
                 }
             }
-            self.isSporty = Double(numberOfDaysWhenStepsMoreThan8000) / Double(31) > 0.65
+            self.isSporty = Double(numberOfDaysWhenStepsMoreThan8000) / Double(31) > 0.65 ? 1 : 0
             
             let avgArrayValue = result.map { $0.count }.reduce(0, +) / result.count
-            self.isSporty = self.isActive && avgArrayValue > 100
+            self.isSporty = self.isActive * (avgArrayValue > 100 ? 1 : 0)
             self.getWeight()
             
         }
@@ -121,7 +121,8 @@ class HealthAccessViewController: UIViewController {
                               "occupation": User.occupation
                               ]
             print(json)
-            
+            //PPApiWorker.getRecomendedRecipies(body: json)
+            PPApiWorker.getRecipiesByCategory(category: 0)
             self.performSegue(withIdentifier: "AllRecipesSegue", sender: nil)
         }
     }

@@ -18,9 +18,9 @@ final class VKApiWorker {
                 User.firstName = response[0, "first_name"].stringValue
                 User.lastName = response[0, "last_name"].stringValue
                 let rel = response[0, "relation"].stringValue
-                User.relation = (rel == "0" || rel == "1") ? "1" : "0"
+                User.relation = (rel == "0" || rel == "1") ? 1 : 0
                 let occupation = response[0, "type"].stringValue
-                User.occupation = occupation == "work" ? "1" : "0"
+                User.occupation = occupation == "work" ? 1 : 0
                 User.linkProfileImage = response[0, "photo_200"].stringValue
             }, onError: { error in
                 print(error)
