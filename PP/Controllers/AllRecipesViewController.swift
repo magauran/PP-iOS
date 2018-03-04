@@ -16,6 +16,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet var categoriesButtons: [UIButton]!
     
     var selectedCategory = 0
+    var recipies = [Recipe]()
     
     let defaultFont = UIFont(name: "Helvetica", size: 15)
     let selectedFont = UIFont(name: "Helvetica Bold", size: 15)
@@ -24,6 +25,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(recipies)
         self.navigationItem.title = "Рецепты"
         self.collectionView.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "recipeCellId")
     }
@@ -49,7 +51,7 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return recipies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

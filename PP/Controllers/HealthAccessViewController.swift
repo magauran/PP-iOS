@@ -123,9 +123,9 @@ class HealthAccessViewController: UIViewController {
             print(json)
             //PPApiWorker.getRecomendedRecipies(body: json)
             PPApiWorker.getRecipiesByCategory(category: 0) { result in
-                print(result)
+                self.performSegue(withIdentifier: "AllRecipesSegue", sender: result)
             }
-            self.performSegue(withIdentifier: "AllRecipesSegue", sender: nil)
+            
         }
     }
     
@@ -134,6 +134,16 @@ class HealthAccessViewController: UIViewController {
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         return (hour > 3 && hour < 13) ? 1 : 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "AllRecipesSegue")
+        {
+            let secondViewController = segue.destination as! UINavigationController
+            let targetController = secondViewController.topViewController as! AllRecipesViewController
+            targetController.recipies = sender as! [Recipe]
+        }
+    
     }
     
 }
