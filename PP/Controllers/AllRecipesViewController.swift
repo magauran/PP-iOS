@@ -18,6 +18,8 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     var selectedCategory = 0
     var recipies = [Recipe]()
     
+    var choosenImage = UIImage.init()
+    
     let defaultFont = UIFont(name: "Helvetica", size: 15)
     let selectedFont = UIFont(name: "Helvetica Bold", size: 15)
     
@@ -73,7 +75,11 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "RecipeSegue", sender: nil)
+        
+        let cv = collectionView.cellForItem(at: indexPath) as! RecipeCollectionViewCell
+        self.choosenImage = cv.imageView.image!
+        performSegue(withIdentifier: "RecipeSegue", sender: recipies[indexPath.row])
+        
     }
 
     
@@ -83,6 +89,17 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         self.selectedCategory = sender.tag
     }
  
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "RecipeSegue") {
+            let rec = sender as! Recipe
+            let secondViewController = segue.destination as! RecipeTableViewController
+            secondViewController.image = self.choosenImage
+            secondViewController.recipeTime = rec.time
+            secondViewController.recipeTitle = rec.title
+            secondViewController.ingredients = rec.ingredients
+            secondViewController.instructions = rec.instructions
+            
+        }
+    }
 
 }

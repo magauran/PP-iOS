@@ -10,6 +10,12 @@ import UIKit
 
 class RecipeTableViewController: UITableViewController {
 
+    var image = UIImage(named: "fon1")!
+    var recipeTitle = ""
+    var recipeTime = ""
+    var ingredients = [Ingredient]()
+    var instructions = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,19 +33,19 @@ class RecipeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 + 10 // 10 - количество ингредиентов
+        return 1 + self.ingredients.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeHeadCell", for: indexPath) as! RecipeHeadTableViewCell
-            cell.displayContent(image: UIImage(named: "fon1")!, title: "111", time: "222")
+            cell.displayContent(image: image, title: recipeTitle, time: recipeTime)
             return cell
         }
-        if indexPath.row <= 10 {
+        if indexPath.row <= self.ingredients.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientTableViewCell
-            cell.displayContent(name: "Картошка", count: "1 мешок")
+            cell.displayContent(name: ingredients[indexPath.row - 1].name, count: ingredients[indexPath.row - 1].value)
             return cell
         }
         
@@ -49,41 +55,6 @@ class RecipeTableViewController: UITableViewController {
     }
  
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
