@@ -23,6 +23,7 @@ class RecipeTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "IngredientTableViewCell", bundle: nil), forCellReuseIdentifier: "IngredientCell")
         self.tableView.register(UINib(nibName: "InstructionTableViewCell", bundle: nil), forCellReuseIdentifier: "InstructionCell")
         
+        self.navigationController?.hidesBarsOnSwipe = true
         
     }
 

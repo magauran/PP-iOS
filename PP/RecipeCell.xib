@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,31 +26,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="198" height="328"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon1" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-k4-Ddf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-k4-Ddf">
                         <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="eqJ-k4-Ddf" secondAttribute="height" multiplier="1:1" id="8br-4e-Kgz"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-Hb-9jn">
-                        <rect key="frame" x="0.0" y="198" width="198" height="170.5"/>
+                        <rect key="frame" x="0.0" y="198" width="198" height="130"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="i6t-rA-CQx">
-                                <rect key="frame" x="10" y="0.0" width="198" height="170.5"/>
+                                <rect key="frame" x="10" y="0.0" width="198" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название блюда" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-LJ-4YT">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="86.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название блюда" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="vEt-LJ-4YT">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="81.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время приготовления" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXV-wB-QbJ">
-                                        <rect key="frame" x="0.0" y="66" width="198" height="84"/>
+                                        <rect key="frame" x="0.0" y="81.5" width="198" height="48.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.4980009198" green="0.49806165699999999" blue="0.49797290560000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="DXV-wB-QbJ" firstAttribute="height" secondItem="vEt-LJ-4YT" secondAttribute="height" multiplier="0.6" id="czl-Mb-XH0"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +85,4 @@
             <point key="canvasLocation" x="-1042" y="223"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="fon1" width="595" height="794"/>
-    </resources>
 </document>

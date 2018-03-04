@@ -34,6 +34,7 @@
 		8A6EC50E204BA917008267C2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC50D204BA917008267C2 /* Ingredient.swift */; };
 		8A6EC511204BC0B3008267C2 /* InstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC50F204BC0B3008267C2 /* InstructionTableViewCell.swift */; };
 		8A6EC512204BC0B3008267C2 /* InstructionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC510204BC0B3008267C2 /* InstructionTableViewCell.xib */; };
+		8A6EC514204BDD35008267C2 /* UIImage+NSURLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC513204BDD35008267C2 /* UIImage+NSURLConnection.swift */; };
 		8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */; };
 		8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */; };
 		8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B8204AD64C009E6C80 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		8A6EC50D204BA917008267C2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		8A6EC50F204BC0B3008267C2 /* InstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableViewCell.swift; sourceTree = "<group>"; };
 		8A6EC510204BC0B3008267C2 /* InstructionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionTableViewCell.xib; sourceTree = "<group>"; };
+		8A6EC513204BDD35008267C2 /* UIImage+NSURLConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+NSURLConnection.swift"; sourceTree = "<group>"; };
 		8A8CA7B1204AD64C009E6C80 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				8A6EC4EC204B11CC008267C2 /* HKBiologicalSex+IntRepresentation.swift */,
 				8A6EC4F3204B1E20008267C2 /* Date+Adding.swift */,
 				8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */,
+				8A6EC513204BDD35008267C2 /* UIImage+NSURLConnection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6EC514204BDD35008267C2 /* UIImage+NSURLConnection.swift in Sources */,
 				8A6EC4D9204AE9BA008267C2 /* ProfileViewController.swift in Sources */,
 				8A6EC4F4204B1E20008267C2 /* Date+Adding.swift in Sources */,
 				8A6EC4D5204AE986008267C2 /* AllRecipesViewController.swift in Sources */,

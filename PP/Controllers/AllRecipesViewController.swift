@@ -17,13 +17,12 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var selectedCategory = 0
     var recipes = [Recipe]()
+    var recipesCopy = [Recipe]()
     
     var choosenImage = UIImage.init()
     
     let defaultFont = UIFont(name: "Helvetica", size: 15)
     let selectedFont = UIFont(name: "Helvetica Bold", size: 15)
-    
-    var navigationBarIsHidden = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,24 +30,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         self.collectionView.register(UINib(nibName: "RecipeCell", bundle: nil), forCellWithReuseIdentifier: "recipeCellId")
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView.panGestureRecognizer.velocity(in: self.collectionView).y > 0 {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                self.view.setNeedsLayout()
-                print("Unhide")
-            })
-        } else {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.view.setNeedsLayout()
-                print("Hide")
-            })
-           
-
-        }
-
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
@@ -56,15 +37,8 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCellId", for: indexPath) as! RecipeCollectionViewCell
-        
-        var image = UIImage(named: "fon1")!
-        
-        let url = URL(string: recipes[indexPath.row].photo)
-        if let data = try? Data(contentsOf: url!) {
-            image = UIImage(data : data)!
-        }
-        
-        cell.displayContent(image: image, title: recipes[indexPath.row].title, time: recipes[indexPath.row].time)
+      
+        cell.displayContent(imageURL: recipes[indexPath.row].photo, title: recipes[indexPath.row].title, time: recipes[indexPath.row].time)
         
         return cell
     }
@@ -86,6 +60,19 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         self.categoriesButtons[selectedCategory].titleLabel?.font = self.defaultFont
         self.categoriesButtons[sender.tag].titleLabel?.font = self.selectedFont
         self.selectedCategory = sender.tag
+        
+        if sender.tag == 0 {
+            self.recipes = self.recipesCopy
+            self.collectionView.reloadData()
+        } else {
+            PPApiWorker.getRecipesByCategory(category: sender.tag - 1) {
+                result in
+                self.recipesCopy = self.recipes
+                self.recipes = result
+                self.collectionView.reloadData()
+            }
+        }
+        
     }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

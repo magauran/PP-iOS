@@ -18,10 +18,17 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     
-    func displayContent(image: UIImage, title: String, time: String) {
-        self.imageView.image = image
+    func displayContent(imageURL: String, title: String, time: String) {
+        self.imageView.imageFromUrl(urlString: imageURL)
         self.titleLabel.text = title
         self.timeLabel.text = time
+    }
+    
+ 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView.image = nil
+        
     }
     
     
