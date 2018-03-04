@@ -116,8 +116,8 @@ class HealthAccessViewController: UIViewController {
                               "isSporty": self.isSporty,
                               "isBirthday": self.isBirthday,
                               "subscriptions": User.subscriptions,
-                              "relation": User.relation
-                
+                              "relation": User.relation,
+                              "isBreakfast": self.isBreakfast
                               ]
             print(json)
             
@@ -125,5 +125,11 @@ class HealthAccessViewController: UIViewController {
         }
     }
     
+    var isBreakfast: Int {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        return (hour > 3 && hour < 13) ? 1 : 0
+    }
     
 }
