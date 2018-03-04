@@ -10,7 +10,6 @@
 		3C14AC504FC2DB1F064BBC1A /* Pods_PP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998A0AC38C4BBE9128CF06CF /* Pods_PP.framework */; };
 		8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */; };
 		8A6EC4D5204AE986008267C2 /* AllRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D4204AE986008267C2 /* AllRecipesViewController.swift */; };
-		8A6EC4D7204AE9A5008267C2 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D6204AE9A5008267C2 /* RecipeViewController.swift */; };
 		8A6EC4D9204AE9BA008267C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4D8204AE9BA008267C2 /* ProfileViewController.swift */; };
 		8A6EC4DB204AEE4D008267C2 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */; };
 		8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */; };
@@ -25,6 +24,11 @@
 		8A6EC4F8204B3827008267C2 /* VKApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */; };
 		8A6EC4FA204B4B9D008267C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4F9204B4B9D008267C2 /* User.swift */; };
 		8A6EC4FC204B717E008267C2 /* UIImage+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */; };
+		8A6EC500204B856D008267C2 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC4FF204B856D008267C2 /* RecipeTableViewController.swift */; };
+		8A6EC502204B86E0008267C2 /* RecipeHeadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC501204B86E0008267C2 /* RecipeHeadTableViewCell.xib */; };
+		8A6EC504204B8832008267C2 /* RecipeHeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */; };
+		8A6EC507204B8E6A008267C2 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */; };
+		8A6EC508204B8E6A008267C2 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */; };
 		8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */; };
 		8A8CA7B7204AD64C009E6C80 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */; };
 		8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CA7B8204AD64C009E6C80 /* Main.storyboard */; };
@@ -37,7 +41,6 @@
 		24E6DBB5C21233D8BCBAD1F3 /* Pods-PP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PP/Pods-PP.debug.xcconfig"; sourceTree = "<group>"; };
 		8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAccessViewController.swift; sourceTree = "<group>"; };
 		8A6EC4D4204AE986008267C2 /* AllRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesViewController.swift; sourceTree = "<group>"; };
-		8A6EC4D6204AE9A5008267C2 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		8A6EC4D8204AE9BA008267C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -53,6 +56,11 @@
 		8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApiWorker.swift; sourceTree = "<group>"; };
 		8A6EC4F9204B4B9D008267C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A6EC4FB204B717E008267C2 /* UIImage+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Circle.swift"; sourceTree = "<group>"; };
+		8A6EC4FF204B856D008267C2 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		8A6EC501204B86E0008267C2 /* RecipeHeadTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeHeadTableViewCell.xib; sourceTree = "<group>"; };
+		8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeadTableViewCell.swift; sourceTree = "<group>"; };
+		8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
 		8A8CA7B1204AD64C009E6C80 /* PP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +99,7 @@
 				8A8CA7B6204AD64C009E6C80 /* StartViewController.swift */,
 				8A6EC4D1204AE3C3008267C2 /* HealthAccessViewController.swift */,
 				8A6EC4D4204AE986008267C2 /* AllRecipesViewController.swift */,
-				8A6EC4D6204AE9A5008267C2 /* RecipeViewController.swift */,
+				8A6EC4FF204B856D008267C2 /* RecipeTableViewController.swift */,
 				8A6EC4D8204AE9BA008267C2 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -101,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */,
+				8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */,
+				8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */,
 				8A6EC4DF204B0956008267C2 /* CategoriesScrollView.swift */,
 			);
 			path = Views;
@@ -134,6 +144,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8A6EC4FD204B7F9A008267C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC4FE204B7FA6008267C2 /* VK */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8A6EC4FE204B7FA6008267C2 /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EC4F5204B3724008267C2 /* VKDelegate.swift */,
+				8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */,
+			);
+			path = VK;
+			sourceTree = "<group>";
+		};
 		8A8CA7A8204AD64C009E6C80 = {
 			isa = PBXGroup;
 			children = (
@@ -157,15 +184,16 @@
 			children = (
 				8A6EC4F2204B12B3008267C2 /* PP.entitlements */,
 				8A8CA7B4204AD64C009E6C80 /* AppDelegate.swift */,
-				8A6EC4F5204B3724008267C2 /* VKDelegate.swift */,
-				8A6EC4F7204B3827008267C2 /* VKApiWorker.swift */,
+				8A6EC4FD204B7F9A008267C2 /* Network */,
 				8A6EC4DC204AF298008267C2 /* Views */,
 				8A6EC4E8204B1180008267C2 /* Models */,
 				8A6EC4E1204B1006008267C2 /* HealthKit */,
 				8A6EC4EB204B11A9008267C2 /* Extensions */,
 				8A6EC4D3204AE958008267C2 /* Controllers */,
 				8A8CA7B8204AD64C009E6C80 /* Main.storyboard */,
+				8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */,
 				8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */,
+				8A6EC501204B86E0008267C2 /* RecipeHeadTableViewCell.xib */,
 				8A8CA7BB204AD64C009E6C80 /* Assets.xcassets */,
 				8A8CA7BD204AD64C009E6C80 /* LaunchScreen.storyboard */,
 				8A8CA7C0204AD64C009E6C80 /* Info.plist */,
@@ -249,10 +277,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6EC508204B8E6A008267C2 /* IngredientTableViewCell.xib in Resources */,
 				8A8CA7BF204AD64C009E6C80 /* LaunchScreen.storyboard in Resources */,
 				8A8CA7BC204AD64C009E6C80 /* Assets.xcassets in Resources */,
 				8A8CA7BA204AD64C009E6C80 /* Main.storyboard in Resources */,
 				8A6EC4DB204AEE4D008267C2 /* RecipeCell.xib in Resources */,
+				8A6EC502204B86E0008267C2 /* RecipeHeadTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,13 +350,15 @@
 				8A6EC4D2204AE3C3008267C2 /* HealthAccessViewController.swift in Sources */,
 				8A6EC4DE204AF2B5008267C2 /* RecipeCollectionViewCell.swift in Sources */,
 				8A6EC4EA204B118F008267C2 /* Steps.swift in Sources */,
+				8A6EC500204B856D008267C2 /* RecipeTableViewController.swift in Sources */,
 				8A6EC4E3204B1025008267C2 /* HKSetupAssistant.swift in Sources */,
 				8A6EC4E0204B0956008267C2 /* CategoriesScrollView.swift in Sources */,
 				8A8CA7B5204AD64C009E6C80 /* AppDelegate.swift in Sources */,
+				8A6EC507204B8E6A008267C2 /* IngredientTableViewCell.swift in Sources */,
+				8A6EC504204B8832008267C2 /* RecipeHeadTableViewCell.swift in Sources */,
 				8A6EC4EE204B11CD008267C2 /* HKBiologicalSex+IntRepresentation.swift in Sources */,
 				8A6EC4F8204B3827008267C2 /* VKApiWorker.swift in Sources */,
 				8A6EC4FC204B717E008267C2 /* UIImage+Circle.swift in Sources */,
-				8A6EC4D7204AE9A5008267C2 /* RecipeViewController.swift in Sources */,
 				8A6EC4F6204B3724008267C2 /* VKDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -355,7 +355,7 @@
                         <outletCollection property="categoriesButtons" destination="oO0-UA-BwF" collectionClass="NSMutableArray" id="lGC-MX-get"/>
                         <outletCollection property="categoriesButtons" destination="ywQ-sw-chZ" collectionClass="NSMutableArray" id="bpd-r0-uwV"/>
                         <outletCollection property="categoriesButtons" destination="Km4-vJ-c3j" collectionClass="NSMutableArray" id="YWV-S6-S88"/>
-                        <segue destination="RKd-69-EQD" kind="show" identifier="RecipeSegue" id="t0u-R1-Omm"/>
+                        <segue destination="Etm-MH-04y" kind="show" identifier="RecipeSegue" id="735-Ve-Peg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IA1-R3-np7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -598,20 +598,33 @@
             </objects>
             <point key="canvasLocation" x="1857" y="705"/>
         </scene>
-        <!--Recipe View Controller-->
-        <scene sceneID="RJM-9K-Eu3">
+        <!--Recipe Table View Controller-->
+        <scene sceneID="aWE-Wl-a0I">
             <objects>
-                <viewController id="RKd-69-EQD" customClass="RecipeViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dtz-8s-Liw">
+                <tableViewController id="Etm-MH-04y" customClass="RecipeTableViewController" customModule="PP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cpx-wY-WiA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lSW-8A-znM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8m1-4x-WNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kwp-Fc-gaW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kwp-Fc-gaW" id="Nbv-ZP-cm3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Etm-MH-04y" id="Oh9-4N-iqn"/>
+                            <outlet property="delegate" destination="Etm-MH-04y" id="aNe-Ut-iK4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rP5-hm-wIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="-141"/>
+            <point key="canvasLocation" x="1857" y="-46"/>
         </scene>
     </scenes>
     <resources>
