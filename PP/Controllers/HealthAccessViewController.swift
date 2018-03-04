@@ -117,7 +117,8 @@ class HealthAccessViewController: UIViewController {
                               "isBirthday": self.isBirthday,
                               "subscriptions": User.subscriptions,
                               "relation": User.relation,
-                              "isBreakfast": self.isBreakfast
+                              "isBreakfast": self.isBreakfast,
+                              "occupation": User.occupation
                               ]
             print(json)
             

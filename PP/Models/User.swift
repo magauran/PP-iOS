@@ -13,6 +13,7 @@ class User {
     static var firstName = ""
     static var lastName = ""
     static var relation = ""
+    static var occupation = ""
     static var subscriptions: [String]!
     static var linkProfileImage = ""
 }
