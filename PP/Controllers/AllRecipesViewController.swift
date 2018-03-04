@@ -47,7 +47,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
 
         }
 
-        //self.navigationController?.setNavigationBarHidden(.yscrollView.panGestureRecognizer.velocity(in: self.collectionView).y > 0, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -57,7 +56,14 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCellId", for: indexPath) as! RecipeCollectionViewCell
         
-        cell.displayContent(image: UIImage(named: "fon1")!, title: "Название блюда", time: "10 минут")
+        var image = UIImage(named: "fon1")!
+        
+        let url = URL(string: recipies[indexPath.row].photo)
+        if let data = try? Data(contentsOf: url!) {
+            image = UIImage(data : data)!
+        }
+        
+        cell.displayContent(image: image, title: recipies[indexPath.row].title, time: recipies[indexPath.row].time)
         
         return cell
     }
@@ -77,14 +83,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         self.selectedCategory = sender.tag
     }
  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
