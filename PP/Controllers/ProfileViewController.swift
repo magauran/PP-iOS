@@ -21,7 +21,6 @@ class ProfileViewController: UIViewController {
     
     let categories = ["Вегетарианское", "Фитнес", "10 минут", "Классическое", "Премиум", "Праздничное"]
     
-    
     @IBAction func switchHealthKitAccess(_ sender: UISwitch) {
     }
     
@@ -38,9 +37,7 @@ class ProfileViewController: UIViewController {
             self.categoriesLabels[i].text = categories[i]
             
         }
-        
         self.fillVKData()
-        
     }
 
     func fillVKData() {

@@ -53,7 +53,6 @@ class HKDataStore {
         completion(0)
     }
     
-    
     class func getWeight(completion: @escaping (Double) -> Void) {
         let healthStore = HKHealthStore()
         
@@ -82,7 +81,6 @@ class HKDataStore {
         
         healthStore.execute(query)
     }
-    
     
     class func getSteps(completion: @escaping ([Steps]) -> Void) {
         let healthStore = HKHealthStore()

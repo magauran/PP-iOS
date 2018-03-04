@@ -36,7 +36,6 @@ class PPApiWorker {
                     let jsonData = response.data
                     let jsonDecoder = JSONDecoder()
                     
-                    
                     let json = JSON(jsonData!)
                     let array = json["result"].arrayValue
                     for i in array {
@@ -80,9 +79,8 @@ class PPApiWorker {
         let hour = calendar.component(.hour, from: date)
         let isBreakfast = (hour > 3 && hour < 13) ? 1 : 0
         let body = ["isBreakfast" : isBreakfast]
-        // Fetch Request
+        
         Alamofire.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
-        //Alamofire.request(url)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                                 if (response.result.error == nil) {
@@ -105,8 +103,6 @@ class PPApiWorker {
                                         let r = Recipe.init(ingredients: ingred, photo: photo, title: title, time: time, category: category, instructions: instructions)
                                         recipes.append(r)
                                     }
-                                    //print(recipes)
-
                                 }
                                 else {
 

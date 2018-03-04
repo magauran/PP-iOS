@@ -122,6 +122,10 @@
 		8A6EC4DC204AF298008267C2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A6EC510204BC0B3008267C2 /* InstructionTableViewCell.xib */,
+				8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */,
+				8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */,
+				8A6EC501204B86E0008267C2 /* RecipeHeadTableViewCell.xib */,
 				8A6EC4DD204AF2B5008267C2 /* RecipeCollectionViewCell.swift */,
 				8A6EC503204B8832008267C2 /* RecipeHeadTableViewCell.swift */,
 				8A6EC505204B8E6A008267C2 /* IngredientTableViewCell.swift */,
@@ -211,10 +215,6 @@
 				8A6EC4EB204B11A9008267C2 /* Extensions */,
 				8A6EC4D3204AE958008267C2 /* Controllers */,
 				8A8CA7B8204AD64C009E6C80 /* Main.storyboard */,
-				8A6EC510204BC0B3008267C2 /* InstructionTableViewCell.xib */,
-				8A6EC506204B8E6A008267C2 /* IngredientTableViewCell.xib */,
-				8A6EC4DA204AEE4D008267C2 /* RecipeCell.xib */,
-				8A6EC501204B86E0008267C2 /* RecipeHeadTableViewCell.xib */,
 				8A8CA7BB204AD64C009E6C80 /* Assets.xcassets */,
 				8A8CA7BD204AD64C009E6C80 /* LaunchScreen.storyboard */,
 				8A8CA7C0204AD64C009E6C80 /* Info.plist */,

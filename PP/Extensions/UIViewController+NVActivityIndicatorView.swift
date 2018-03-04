@@ -21,4 +21,5 @@ extension UIViewController: NVActivityIndicatorViewable{
     func hideActivityIndicatory() {
         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
+    
 }

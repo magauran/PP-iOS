@@ -10,7 +10,6 @@ import UIKit
 
 class RecipeCollectionViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +22,6 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         self.titleLabel.text = title
         self.timeLabel.text = time
     }
-    
  
     override func prepareForReuse() {
         super.prepareForReuse()

@@ -52,4 +52,5 @@ extension Recipe: Decodable {
         
         self.init(ingredients: ingredients, photo: photo, title: title, time: time, category: category, instructions: instructions)
     }
+    
 }

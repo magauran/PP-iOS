@@ -19,4 +19,5 @@ extension HKBiologicalSex {
     case .other: return 0
     }
   }
+    
 }

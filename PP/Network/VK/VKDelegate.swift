@@ -11,9 +11,7 @@ import SwiftyVK
 
 class VkDelegate: VKDelegate {
     
-    
     let appId = "6394857"
-    
     
     init() {
         VK.configure(withAppId: appId, delegate: self)

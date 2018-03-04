@@ -19,7 +19,6 @@ class HealthAccessViewController: UIViewController {
     var isSporty = Int()
     var age = Int()
     
-    
     @IBAction func yesButton(_ sender: Any) {
         healthKitAuth()
     }
@@ -132,9 +131,6 @@ class HealthAccessViewController: UIViewController {
             PPApiWorker.getRecomendedRecipes(body: json) { result in
                 self.performSegue(withIdentifier: "AllRecipesSegue", sender: result)
             }
-//            PPApiWorker.getRecipesByCategory(category: 0) { result in
-//
-//            }
             
         }
     }

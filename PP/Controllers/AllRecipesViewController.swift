@@ -38,7 +38,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @objc func refreshData() {
-        //self.showActivityIndicatory()
         self.refreshControl.beginRefreshing()
         self.reloadData()
     }
@@ -66,7 +65,6 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
         performSegue(withIdentifier: "RecipeSegue", sender: recipes[indexPath.row])
         
     }
-    
     
     @IBAction func chooseCategory(_ sender: UIButton) {
         self.categoriesButtons[selectedCategory].titleLabel?.font = self.defaultFont
@@ -98,28 +96,21 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
             self.recipes = self.recipesCopy
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
-            
         } else {
-            
             PPApiWorker.getRecipesByCategory(category: self.selectedCategory - 1) {
                 result in
-                
-                //DispatchQueue.main.async {
                     self.recipesCopy = self.recipes
                     self.recipes = result
                     self.collectionView.reloadData()
                     self.refreshControl.endRefreshing()
-                   // self.hideActivityIndicatory()
-                //}
-                
             }
         }
-        
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if (segue.identifier == "RecipeSegue") {
             let rec = sender as! Recipe
             let secondViewController = segue.destination as! RecipeTableViewController
@@ -128,8 +119,8 @@ class AllRecipesViewController: UIViewController, UICollectionViewDelegate, UICo
             secondViewController.recipeTitle = rec.title
             secondViewController.ingredients = rec.ingredients
             secondViewController.instructions = rec.instructions
-            
         }
+        
     }
 
 }

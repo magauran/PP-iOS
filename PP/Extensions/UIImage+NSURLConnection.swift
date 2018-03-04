@@ -11,8 +11,8 @@ import UIKit
 import Alamofire
 
 extension UIImageView {
+    
     public func imageFromUrl(urlString: String) {
-        
         
         let url = URL(string: urlString)!
         Alamofire.request(url).responseData { (response) in
@@ -26,4 +26,5 @@ extension UIImageView {
             }
        }
     }
+    
 }

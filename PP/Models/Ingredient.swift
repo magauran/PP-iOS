@@ -35,4 +35,5 @@ extension Ingredient: Decodable {
        
         self.init(value: value, name: name)
     }
+    
 }
