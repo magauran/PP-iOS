@@ -14,5 +14,5 @@ class User {
     static var lastName = ""
     static var relation = ""
     static var subscriptions: [String]!
-    
+    static var linkProfileImage = ""
 }

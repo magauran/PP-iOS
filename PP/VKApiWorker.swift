@@ -13,12 +13,12 @@ final class VKApiWorker {
    
     class func usersGet() {
         _ = VK.API.Users.get([
-            .fields: "photo_200_orig,relation"
+            .fields: "photo_200,relation"
             ]).send(onSuccess: { response in
                 User.firstName = response[0, "first_name"].stringValue
                 User.lastName = response[0, "last_name"].stringValue
                 User.relation = response[0, "relation"].stringValue
-                let linkProfileImage = response[0, "photo_200_orig"].stringValue
+                User.linkProfileImage = response[0, "photo_200"].stringValue
             }, onError: { error in
                 print(error)
             })
